@@ -19,7 +19,7 @@ function App() {
           autoRotate={true}
         />
       
-      <div className="relative z-10">
+      <div className="relative z-3">
       <Sheet>
         <SheetTrigger className="text-white bg-black hover:bg-gray-800 p-4">Ta kontakt for å avtale et møte.</SheetTrigger>
         <SheetContent>

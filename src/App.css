@@ -48,3 +48,29 @@ html, body, #root {
 .read-the-docs {
   color: #888;
 }
+
+
+
+.a-dialog {
+  /* Example customizations */
+  background: rgba(30, 30, 30, 0.95) !important;
+  color: #fff !important;
+  border-radius: 1rem !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+.a-dialog-button {
+  background: #111 !important;
+  color: #fff !important;
+  border-radius: 0.5rem !important;
+  font-weight: bold !important;
+  margin: 0 0.5rem !important;
+}
+
+.a-dialog-deny {
+  background: #0a0204 !important; /* Tailwind rose-600 */
+}
+
+.a-dialog-allow {
+  background: #637b7f !important; /* Tailwind cyan-500 */
+}
