@@ -22,7 +22,6 @@ interface ImageGallery360Props {
 
 function ImageGallery360({ 
   imageUrl, 
-  title = '360° View', 
   autoRotate = true 
 }: ImageGallery360Props) {
   return (
