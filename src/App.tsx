@@ -15,31 +15,18 @@ function App() {
    
       
         <ImageGallery360 
-          imageUrl="/images/360/sdkt.jpg"
+          imageUrl="/images/360/bakgrunn.avif"
           autoRotate={true}
         />
       
       <div className="relative z-3">
       <Sheet>
-        <SheetTrigger className="text-white bg-black hover:bg-gray-800 p-4">Ta kontakt for å avtale et møte.</SheetTrigger>
+        <SheetTrigger className="text-white bg-black hover:bg-gray-800 p-4">Meld deg på forhåndssalget</SheetTrigger>
         <SheetContent>
           <SheetHeader>
-            <SheetTitle>SDKT Entertainment</SheetTitle>
+            <SheetTitle>HEI DET ER MEG</SheetTitle>
             <SheetDescription>
-            SDKT representerer for øyeblikket 7 forskjellige kunstnere som alle har hver sin måte å uttrykke seg på, enten det er via billedkunst, klær, musikk eller underholdning.
-            Ta kontakt for å avtale et møte.
-            </SheetDescription>
-            <SheetDescription>
-            SDKT representerer for øyeblikket 7 forskjellige kunstnere som alle har hver sin måte å uttrykke seg på, enten det er via billedkunst, klær, musikk eller underholdning.
-            Ta kontakt for å avtale et møte.
-            </SheetDescription>
-            <SheetDescription>
-            SDKT representerer for øyeblikket 7 forskjellige kunstnere som alle har hver sin måte å uttrykke seg på, enten det er via billedkunst, klær, musikk eller underholdning.
-            Ta kontakt for å avtale et møte.
-            </SheetDescription>
-            <SheetDescription>
-            SDKT representerer for øyeblikket 7 forskjellige kunstnere som alle har hver sin måte å uttrykke seg på, enten det er via billedkunst, klær, musikk eller underholdning.
-            Ta kontakt for å avtale et møte.
+            RING MEG MIKE @ KARPEWORLD.
             </SheetDescription>
           </SheetHeader>
         </SheetContent>
