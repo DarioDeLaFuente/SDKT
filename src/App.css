@@ -57,6 +57,8 @@ html, body, #root {
   color: #fff !important;
   border-radius: 1rem !important;
   font-family: 'Inter', sans-serif !important;
+  position: fixed !important;
+  z-index: 9999 !important;
 }
 
 .a-dialog-button {
