@@ -27,7 +27,7 @@ function ImageGallery360({
   className
 }: ImageGallery360Props) {
   return (
-    <div className={`fixed inset-0 w-full h-full z-1 ${className || ''}`}>
+    <div className={`fixed inset-0 w-full h-full ${className || ''}`}>
       <Scene
         embedded
         vrModeUi="enabled: false"
