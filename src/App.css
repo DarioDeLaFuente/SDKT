@@ -67,12 +67,15 @@ html, body, #root {
   border-radius: 0.5rem !important;
   font-weight: bold !important;
   margin: 0 0.5rem !important;
+  z-index: 9999 !important;
 }
 
 .a-dialog-deny {
-  background: #0a0204 !important; /* Tailwind rose-600 */
+  background: #0a0204 !important; 
+  z-index: 9999 !important;/* Tailwind rose-600 */
 }
 
 .a-dialog-allow {
-  background: #637b7f !important; /* Tailwind cyan-500 */
+  background: #637b7f !important; 
+  z-index: 9999 !important;/* Tailwind cyan-500 */
 }
