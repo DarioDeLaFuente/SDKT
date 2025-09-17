@@ -18,14 +18,16 @@ interface ImageGallery360Props {
   imageUrl: string
   title?: string
   autoRotate?: boolean
+  className?: string
 }
 
-function ImageGallery360({ 
-  imageUrl, 
-  autoRotate = true 
+function ImageGallery360({
+  imageUrl,
+  autoRotate = true,
+  className
 }: ImageGallery360Props) {
   return (
-    <div className="fixed inset-0 w-full h-full z-1">
+    <div className={`fixed inset-0 w-full h-full z-1 ${className || ''}`}>
       <Scene
         embedded
         vrModeUi="enabled: false"
