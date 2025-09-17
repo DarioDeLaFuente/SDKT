@@ -20,9 +20,9 @@ function App() {
           imageUrl="/images/360/bakgrunn.avif"
           autoRotate={true}
         />
-        <div className="relative z-3 w-[55svh]">
-        <div className="relative z-3 h-[15svh]  w-[55svh] flex justify-center  text-white pt-4"><Label htmlFor="email" className="text-xl">Meld deg på forhåndssalget</Label></div>
-        <div className="relative z-3 bg-white/80 text-black p-8 backdrop-blur-lg pointer-events-auto">
+        <div className="relative z-4 w-[55svh]">
+        <div className="relative z-4 h-[15svh]  w-[55svh] flex justify-center  text-white pt-4"><Label htmlFor="email" className="text-xl">Meld deg på forhåndssalget</Label></div>
+        <div className="relative z-4 bg-white/80 text-black p-8 backdrop-blur-lg pointer-events-auto">
       <div className="grid w-full max-w-sm items-center gap-3 flex justify-center">
       <Input type="email" id="email" placeholder="Din epost" />
       
