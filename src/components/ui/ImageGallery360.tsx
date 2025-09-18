@@ -2,6 +2,7 @@
 
 import 'aframe'
 import { Entity, Scene } from 'aframe-react'
+import { useEffect } from 'react'
 
 declare global {
   namespace JSX {
@@ -19,13 +20,38 @@ interface ImageGallery360Props {
   title?: string
   autoRotate?: boolean
   className?: string
+  onDeviceMotionAllowed?: () => void
 }
 
 function ImageGallery360({
   imageUrl,
   autoRotate = true,
-  className
+  className,
+  onDeviceMotionAllowed
 }: ImageGallery360Props) {
+
+  useEffect(() => {
+    let hasGrantedPermission = false;
+
+    function handleDeviceOrientation() {
+      if (!hasGrantedPermission) {
+        hasGrantedPermission = true;
+        onDeviceMotionAllowed?.();
+        window.removeEventListener('deviceorientation', handleDeviceOrientation);
+      }
+    }
+
+    // Only add listener if the callback is provided
+    if (onDeviceMotionAllowed) {
+      window.addEventListener('deviceorientation', handleDeviceOrientation);
+    }
+
+    return () => {
+      // Clean up the listener if component unmounts or callback changes
+      window.removeEventListener('deviceorientation', handleDeviceOrientation);
+    };
+  }, [onDeviceMotionAllowed]); // Re-run effect if callback changes
+
   return (
     <div className={`fixed inset-0 w-full h-full ${className || ''}`}>
       <Scene

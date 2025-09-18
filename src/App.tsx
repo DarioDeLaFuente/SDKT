@@ -14,26 +14,32 @@ import { useState, useEffect } from 'react'
 
 function App() {
   const [showSignUpForm, setShowSignUpForm] = useState(false)
+  const [deviceMotionAllowed, setDeviceMotionAllowed] = useState(false) // Add this state
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowSignUpForm(true)
-    }, 5000)
+    let timer: number; // Changed from NodeJS.Timeout to number
+    if (deviceMotionAllowed) { // Only start timer if device motion is allowed
+      timer = setTimeout(() => {
+        setShowSignUpForm(true)
+      }, 5000)
+    }
 
     return () => clearTimeout(timer)
-  }, [])
+  }, [deviceMotionAllowed]) // Re-run effect when deviceMotionAllowed changes
 
   return (
     
     <div className="flex flex-col items-center justify-center min-h-svh p-4">
    
       
-        <ImageGallery360 className="z-0"
+        <ImageGallery360
+          className="z-0"
           imageUrl="/images/360/bakgrunn.avif"
           autoRotate={true}
+          onDeviceMotionAllowed={() => setDeviceMotionAllowed(true)} // Pass callback
         />
         
-        {showSignUpForm && (
+        {showSignUpForm && deviceMotionAllowed && ( // Render only if both conditions are true
           <div className="relative z-10 w-[55svh]">
           <div className="relative h-[15svh]  w-[55svh] flex justify-center  text-white pt-4"><Label htmlFor="email" className="uppercase col-span-3 text-2xl md:text-4xl">utsolgt!</Label></div>
           <div className="relative bg-white/20 text-white p-2 border rounded-xl border-white md:p-4 backdrop-blur-lg pointer-events-auto pointer-events-auto">
