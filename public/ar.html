@@ -33,13 +33,13 @@
     <!-- a-frame scene -->
     <a-scene embedded arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
       <a-assets>
-        <img id="img-blue" src="/ar/images/karper.png" crossorigin="anonymous" />
+        <img id="img-blue" src="/images/karper.png" crossorigin="anonymous" />
       </a-assets>
 
       <!-- One marker per .patt -->
       <a-marker type="pattern" url="/ar/patterns/pattern-glassk.patt">
         <a-image
-          src="/ar/images/karper.png"
+          src="#img-blue"
           position="0 1 0"
           scale="1 1 1"
           rotation="0 2 0"
@@ -50,5 +50,20 @@
       <!-- static camera that moves according to the device movemenents -->
       <a-entity camera></a-entity>
     </a-scene>
+
+    <script>
+      // Hide loader when camera stream is ready
+      window.addEventListener("arjs-video-loaded", function () {
+        var loader = document.querySelector(".arjs-loader");
+        if (loader) loader.style.display = "none";
+      });
+      // Fallback: hide on scene loaded/camera-init
+      document.querySelector("a-scene")?.addEventListener("loaded", function () {
+        setTimeout(function () {
+          var loader = document.querySelector(".arjs-loader");
+          if (loader) loader.style.display = "none";
+        }, 300);
+      });
+    </script>
   </body>
 </html>
