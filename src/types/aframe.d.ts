@@ -7,6 +7,7 @@ declare namespace JSX {
     "a-entity": any;
     "a-assets": any;
     "a-sky": any;
+    "a-nft": any;
   }
 }
 

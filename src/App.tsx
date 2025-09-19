@@ -54,6 +54,14 @@ function App() {
               <SheetDescription>
               RING MEG .
               </SheetDescription>
+              <div className="pt-2">
+                <a
+                  href="/ar.html"
+                  className="inline-flex items-center justify-center rounded-md bg-black px-4 py-2 text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors uppercase"
+                >
+                  ÅPNE AR-KAMERA
+                </a>
+              </div>
             </SheetHeader>
           </SheetContent>
           <div className="w-full text-[8px] md:text-xs mt-2 text-left text-white-500">Ved å melde deg på godtar du <a className="underline" href="/personvern">personvernerklæringen</a></div>
