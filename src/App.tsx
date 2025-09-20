@@ -46,12 +46,12 @@ function App() {
       
         
         <Sheet>
-          <SheetTrigger className="w-full bg-black text-white py-2 px-4 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed uppercase cursor-pointer">Karpe World i 3D!</SheetTrigger>
-          <SheetContent>
+          <SheetTrigger className="w-full bg-black text-white py-2 px-4 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed uppercase cursor-pointer">Karpe World i AR!</SheetTrigger>
+          <SheetContent className="bg-white/20 text-white p-2 border rounded-xl border-white md:p-4 backdrop-blur-lg pointer-events-auto pointer-events-auto">
             <SheetHeader>
               <SheetTitle>Velkommen til Karpe World</SheetTitle>
-              <SheetDescription>
-               Åpne AR-kameran for å oppleve Karpe World i 3D!
+              <SheetDescription className="text-white">
+               Åpne AR-kameran for å oppleve Karpe World i AR!
               </SheetDescription>
               <div className="pt-2 rounded-md">
                 <a
