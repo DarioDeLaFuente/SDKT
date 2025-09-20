@@ -7,7 +7,6 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { ImageGallery360 } from '@/components/ui/ImageGallery360'
-import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import './App.css'
 import { useState, useEffect } from 'react'
