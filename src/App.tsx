@@ -41,25 +41,25 @@ function App() {
         
         {showSignUpForm && deviceMotionAllowed && ( // Render only if both conditions are true
           <div className="relative z-10 w-[55svh]">
-          <div className="relative h-[15svh]  w-[55svh] flex justify-center  text-white pt-4"><Label htmlFor="email" className="uppercase col-span-3 text-2xl md:text-4xl">Karpe World i 3D!</Label></div>
+          <div className="relative h-[15svh]  w-[55svh] flex justify-center  text-white pt-4"><Label htmlFor="email" className="uppercase col-span-3 text-2xl md:text-3xl">Mine damer og herrer!</Label></div>
           <div className="relative bg-white/20 text-white p-2 border rounded-xl border-white md:p-4 backdrop-blur-lg pointer-events-auto pointer-events-auto">
         <div className="grid w-full max-w-sm items-center gap-3 flex justify-center">
       
         
         <Sheet>
-          <SheetTrigger className="w-full bg-black text-white py-2 px-4  hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed uppercase cursor-pointer">KARPE WORLD AR</SheetTrigger>
+          <SheetTrigger className="w-full bg-black text-white py-2 px-4 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed uppercase cursor-pointer">Karpe World i 3D!</SheetTrigger>
           <SheetContent>
             <SheetHeader>
               <SheetTitle>Velkommen til Karpe World</SheetTitle>
               <SheetDescription>
                Åpne AR-kameran for å oppleve Karpe World i 3D!
               </SheetDescription>
-              <div className="pt-2">
+              <div className="pt-2 rounded-md">
                 <a
                   href="/ar.html"
                   className="inline-flex items-center justify-center rounded-md bg-black px-4 py-2 text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors uppercase"
                 >
-                  Mine damer og herrer
+                  kom en kom alle
                 </a>
               </div>
             </SheetHeader>
