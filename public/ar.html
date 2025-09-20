@@ -31,7 +31,10 @@
     </div>
 
     <!-- a-frame scene -->
-    <a-scene embedded arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
+    <a-scene
+      embedded
+      arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+    >
       <a-assets>
         <img id="img-blue" src="/images/karper.png" crossorigin="anonymous" />
       </a-assets>
@@ -43,7 +46,7 @@
           position="1 0 1"
           scale="1 1 1"
           rotation="3 3 3"
-          animation="property: rotation; to: 0 360 0; loop: true; dur: 7000"
+          animation="property: rotation; to: 0 360 0; position: 0 0 -4; loop: true; dur: 7000"
         ></a-image>
       </a-marker>
 
