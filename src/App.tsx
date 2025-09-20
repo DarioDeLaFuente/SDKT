@@ -48,7 +48,18 @@ function App() {
         <Sheet>
           <SheetTrigger className="w-full bg-black text-white py-2 px-4 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed uppercase cursor-pointer">Karpe World i AR!</SheetTrigger>
           <SheetContent className="bg-white/20 text-white p-2 border rounded-xl border-white md:p-4 backdrop-blur-lg pointer-events-auto pointer-events-auto">
-            <SheetHeader>
+          <div
+    aria-hidden
+    className="absolute inset-0 -z-10 border rounded-xl  bg-no-repeat scale-x-[-1]"
+    style={{
+      backgroundImage: "url('/images/Rage.png')",
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: '160px auto',
+      backgroundPosition: 'left bottom',
+      animation: 'fade-in 2s ease-in-out'
+    }}
+  />
+            <SheetHeader className="text-white" style={{ animation: 'fade-in 4s ease-in-out' }}>
               <SheetTitle>Velkommen til Karpe World</SheetTitle>
               <SheetDescription className="text-white">
                Åpne AR-kameran for å oppleve Karpe World i AR!
@@ -56,7 +67,7 @@ function App() {
               <div className="pt-2 rounded-md">
                 <a
                   href="/ar.html"
-                  className="inline-flex items-center justify-center rounded-md bg-black px-4 py-2 text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors uppercase"
+                  className="inline-flex items-center justify-center rounded-md bg-pink-500 hover:bg-white-600 hover:bg-text-black px-4 py-2 text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors uppercase"
                 >
                   kom en kom alle
                 </a>

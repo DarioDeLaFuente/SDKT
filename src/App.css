@@ -79,3 +79,9 @@ html, body, #root {
   background: #637b7f !important; 
   z-index: 9999 !important;/* Tailwind cyan-500 */
 }
+
+/* Add to src/App.css */
+@keyframes fade-in {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
