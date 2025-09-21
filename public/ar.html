@@ -50,6 +50,24 @@
         ></a-image>
       </a-marker>
 
+      <!-- NFT Marker -->
+      <a-nft
+        type="nft"
+        url="/ar/descriptors/trex/glasskar"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance="0.01"
+        smoothThreshold="5"
+      >
+        <!-- GLB model -->
+        <a-entity
+          gltf-model="/models/glasskar.glb"
+          scale="1 1 1"
+          position="0 0 0"
+          rotation="0 0 0"
+        ></a-entity>
+      </a-nft>
+
       <!-- static camera that moves according to the device movemenents -->
       <a-entity camera></a-entity>
     </a-scene>
