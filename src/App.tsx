@@ -60,9 +60,25 @@ function App() {
     }}
   />
             <SheetHeader className="text-white" style={{ animation: 'fade-in 4s ease-in-out' }}>
-              <SheetTitle>Velkommen til Karpe World</SheetTitle>
+              <SheetTitle>… dere er snart klare til å oppleve Karpe World AR.</SheetTitle>
               <SheetDescription className="text-white">
-               Åpne AR-kameran for å oppleve Karpe World i AR!
+               Oppgaven er enkel, men skjebnesvanger:
+              </SheetDescription>
+              <SheetDescription className="text-white">
+              * Finn boksen.
+              </SheetDescription>
+              <SheetDescription className="text-white">
+              * Scan den.
+              </SheetDescription>
+              <SheetDescription className="text-white">
+              * Og se hva som popper opp…
+              </SheetDescription>
+              <SheetDescription className="text-white">
+              Så spenn sansene, følg rytmen i bakken, og la magien begynne –
+              for dette er ikke bare en kveld på sletta…
+              </SheetDescription>
+              <SheetDescription className="text-white">
+              dette er en forestilling fra en annen verden.
               </SheetDescription>
               <div className="pt-2 rounded-md">
                 <a
