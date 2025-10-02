@@ -42,7 +42,7 @@ function App() {
           <div className="relative z-10 w-[55svh]">
           <div className="relative h-[10svh] w-[55svh] flex justify-center  text-white pt-4"><Label htmlFor="email" className="uppercase col-span-3 text-2xl md:text-3xl">Mine damer og herrer!</Label></div>
           <div className="relative bg-white/20 text-white p-2 border rounded-xl border-white md:p-4 backdrop-blur-lg pointer-events-auto pointer-events-auto">
-        <div className="grid w-full max-w-sm items-center gap-1 flex justify-center">
+        <div className="grid w-full mx-auto items-center gap-1 flex justify-center">
       
         
         <Sheet>
