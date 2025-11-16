@@ -42,11 +42,13 @@ function App() {
 
 
         <div className="mt-2">
-          <ArtistButtonList
-            ariaLabel={showArtistList ? 'Hide artist' : 'Show artist'}
-            title={showArtistList ? 'Hide artist' : 'Show artist'}
-            onClick={() => setShowArtistList(v => !v)}
-          />
+          {showSignUpForm && deviceMotionAllowed && (
+            <ArtistButtonList
+              ariaLabel={showArtistList ? 'Hide artist' : 'Show artist'}
+              title={showArtistList ? 'Hide artist' : 'Show artist'}
+              onClick={() => setShowArtistList(v => !v)}
+            />
+          )}
         </div>
 
         {showArtistList && (
