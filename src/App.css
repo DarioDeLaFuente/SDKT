@@ -83,6 +83,7 @@ html, body, #root {
 /* Tooltip for ArtistButtonList */
 .icon {
   position: relative;
+  z-index: 1;
   background: #ffffff00;
   border-radius: 50%;
   width: 50px;
