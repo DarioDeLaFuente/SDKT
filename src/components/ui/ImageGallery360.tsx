@@ -26,14 +26,11 @@ interface ImageGallery360Props {
   onSceneButtonClick?: () => void
 }
 
-export function ImageGallery360({
+function ImageGallery360({
   imageUrl,
   autoRotate = true,
   className,
-  onDeviceMotionAllowed,
-  showSceneButton = false,
-  sceneButtonLabel = 'Open AR',
-  onSceneButtonClick,
+  onDeviceMotionAllowed
 }: ImageGallery360Props) {
 
   useEffect(() => {
@@ -70,36 +67,29 @@ export function ImageGallery360({
           <img id="skyTexture" src={imageUrl} crossOrigin="anonymous" />
         </Entity>
 
-        <Entity primitive="a-sky" src="#skyTexture" rotation="0 -90 0" />
+        <Entity
+          primitive="a-sky"
+          src="#skyTexture"
+          rotation="0 -90 0"
+        />
 
         {autoRotate && (
-          <Entity animation="property: rotation; to: 0 360 0; loop: true; dur: 100000; easing: linear" />
+          <Entity
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 100000; easing: linear"
+          />
         )}
 
-        <Entity camera look-controls raycaster="objects: .clickable">
+        <Entity camera look-controls>
           <Entity
             primitive="a-cursor"
             id="cursor"
             animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"
             animation__fusing="property: fusing; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500"
           />
-          {showSceneButton && (
-            <Entity
-              className="clickable"
-              position="0 -0.35 -1.2"
-              geometry="primitive: plane; width: 0.7; height: 0.22"
-              material="color: #111; opacity: 0.8; shader: flat"
-              events={{ click: onSceneButtonClick }}
-            >
-              <Entity
-                position="0 0 0.01"
-                text={`value: ${sceneButtonLabel || 'Open AR'}; align: center; color: #fff; width: 2`}
-              />
-            </Entity>
-          )}
         </Entity>
       </Scene>
     </div>
   )
-
 }
+
+export { ImageGallery360 }
