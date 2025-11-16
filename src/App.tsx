@@ -7,13 +7,15 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { ImageGallery360 } from '@/components/ui/ImageGallery360'
-import { Label } from "@/components/ui/label"
+import { ArtistList } from '@/components/ui/arteisList'
 import './App.css'
 import { useState, useEffect } from 'react'
+import { ArtistButtonList } from "./components/ui/artisButtonList"
 
 function App() {
   const [showSignUpForm, setShowSignUpForm] = useState(false)
   const [deviceMotionAllowed, setDeviceMotionAllowed] = useState(false) // Add this state
+  const [showArtistList, setShowArtistList] = useState(false)
 
   useEffect(() => {
     let timer: number; // Changed from NodeJS.Timeout to number
@@ -37,16 +39,28 @@ function App() {
           autoRotate={true}
           onDeviceMotionAllowed={() => setDeviceMotionAllowed(true)} // Pass callback
         />
-        
+
+
+        <div className="mt-2">
+          <ArtistButtonList
+            ariaLabel={showArtistList ? 'Hide artist' : 'Show artist'}
+            title={showArtistList ? 'Hide artist' : 'Show artist'}
+            onClick={() => setShowArtistList(v => !v)}
+          />
+        </div>
+
+        {showArtistList && (
+          <ArtistList/>
+        )}
+
+
+
         {showSignUpForm && deviceMotionAllowed && ( // Render only if both conditions are true
           <div className="relative z-10 w-[55svh]">
-          <div className="relative h-[10svh] w-[55svh] flex justify-center  text-white pt-4"><Label htmlFor="email" className="uppercase col-span-3 text-2xl md:text-3xl">Mine damer og herrer!</Label></div>
-          <div className="relative bg-white/20 text-white p-2 border rounded-xl border-white md:p-4 backdrop-blur-lg pointer-events-auto pointer-events-auto">
-        <div className="grid w-full mx-auto items-center gap-1 flex justify-center">
-      
-        
+          
+        <div className="relative grid w-full mx-auto items-center gap-1 flex justify-center">
         <Sheet>
-          <SheetTrigger className="w-full bg-black text-white py-2 px-4 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed uppercase cursor-pointer">Karpe World i AR!</SheetTrigger>
+          <SheetTrigger className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 bg-black text-white py-2 px-4 rounded-md shadow-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors uppercase flex justify-center items-center">Karpe World i AR!</SheetTrigger>
           <SheetContent className="bg-white/20 text-white p-2 border rounded-xl border-white md:p-4 backdrop-blur-lg pointer-events-auto pointer-events-auto">
           <div
     aria-hidden
@@ -90,11 +104,10 @@ function App() {
               </div>
             </SheetHeader>
           </SheetContent>
-          <div className="w-full text-[8px] md:text-xs mt-2 text-left text-white-500">Ved å clike på knappen over godtar du <a className="underline" href="/personvern">personvernerklæringen</a></div>
         </Sheet>
         </div>
       </div>
-      </div>
+  
         )}
     </div>
   )
